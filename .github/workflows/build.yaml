@@ -10,7 +10,8 @@ jobs:
     name: Build smp-server image
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 1
+      max-parallel: 1 # Sets the limit of jobs to run concurrently
+      matrix:
    steps:
       - name: Checkout source repo
         uses: actions/checkout@v3
@@ -58,7 +59,8 @@ jobs:
     name: Build xftp-server image
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 1
+      max-parallel: 1 # Sets the limit of jobs to run concurrently
+      matrix:
     steps:
       - name: Checkout source repo
         uses: actions/checkout@v3
