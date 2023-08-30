@@ -37,6 +37,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: maxvdm/simplex-smp:latest
+          build-args: APP="smp-server" APP_PORT="5223"
   xftp-server:
     runs-on: ubuntu-latest
     steps:
@@ -68,3 +69,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: maxvdm/simplex-xftp:latest
+          build-args: APP="xftp-server" APP_PORT="443"
