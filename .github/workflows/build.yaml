@@ -1,4 +1,4 @@
-name: Build a SimpleX SMP and XFTP Docker image for ARM64 and AMD64.
+name: Build a SimpleX SMP and XFTP Docker image for ARM64 and AMD64
 
 on:
   push:
@@ -7,7 +7,8 @@ on:
 
 jobs:
   smp-server:
-    runs-on: ubuntu-latest
+    name: Build smp-server image
+    runs-on: ion
     steps:
       - name: Checkout source repo
         uses: actions/checkout@v3
@@ -42,7 +43,8 @@ jobs:
               "APP_PORT=5223"
           context: /home/runner/work/simplex/simplex/
   xftp-server:
-    runs-on: ubuntu-latest
+    name: Build xftp-server image
+    runs-on: ion
     steps:
       - name: Checkout source repo
         uses: actions/checkout@v3
