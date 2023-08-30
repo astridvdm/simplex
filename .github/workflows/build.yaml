@@ -49,7 +49,7 @@ jobs:
           tags: |
               "maxvdm/simplex-smp:5.2.1"
               "ghcr.io/maxvdmerwe/simplex-smp:5.2.1"
-          shim: 2g
+          shm-size: 2g
           build-args: |
               "APP=smp-server"
               "APP_PORT=5223"
@@ -97,7 +97,7 @@ jobs:
           tags: |
              "maxvdm/simplex-xftp:5.2.1"
              "ghcr.io/maxvdmerwe/simplex-xftp:5.2.1"
-          shim: 2g
+          shm-size: 2g
           build-args: |
               "APP=xftp-server"
               "APP_PORT=443"
