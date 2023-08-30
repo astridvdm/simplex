@@ -41,7 +41,7 @@ jobs:
           build-args: |
               "APP=smp-server"
               "APP_PORT=5223"
-          context: ./simplex/simplex/
+          context: /home/max/Downloads/github-runner/work/simplex/simplex/
   xftp-server:
     name: Build xftp-server image
     runs-on: ion
@@ -77,4 +77,4 @@ jobs:
           build-args: |
               "APP=xftp-server"
               "APP_PORT=443"
-          context: ./simplex/simplex/
+          context: /home/max/Downloads/github-runner/work/simplex/simplex/
