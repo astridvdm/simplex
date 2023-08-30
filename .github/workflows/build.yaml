@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 1 # Sets the limit of jobs to run concurrently
+    permissions:
+      contents: read
+      packages: write
     steps:
       - name: Checkout source repo
         uses: actions/checkout@v3
@@ -37,7 +40,7 @@ jobs:
         name: Log in to the Github container registry
         uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
         with:
-          registry: ghcr.io
+          REGISTRY: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       -
@@ -59,6 +62,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 1 # Sets the limit of jobs to run concurrently
+    permissions:
+      contents: read
+      packages: write
     steps:
       - name: Checkout source repo
         uses: actions/checkout@v3
@@ -85,7 +91,7 @@ jobs:
         name: Log in to the Github container registry
         uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
         with:
-          registry: ghcr.io
+          REGISTRY: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       -
