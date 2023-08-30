@@ -8,7 +8,7 @@ on:
 jobs:
   smp-server:
     name: Build smp-server image
-    runs-on: ion
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout source repo
         uses: actions/checkout@v3
@@ -38,13 +38,14 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: maxvdm/simplex-smp:5.2.1
+          shim: 2g
           build-args: |
               "APP=smp-server"
               "APP_PORT=5223"
-          context: /home/max/Downloads/github-runner/work/simplex/simplex/
+          context: /home/runner/work/simplex/simplex/
   xftp-server:
     name: Build xftp-server image
-    runs-on: ion
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout source repo
         uses: actions/checkout@v3
@@ -74,7 +75,8 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: maxvdm/simplex-xftp:5.2.1
+          shim: 2g
           build-args: |
               "APP=xftp-server"
               "APP_PORT=443"
-          context: /home/max/Downloads/github-runner/work/simplex/simplex/
+          context: /home/runner/work/simplex/simplex/
