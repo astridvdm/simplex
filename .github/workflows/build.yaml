@@ -37,7 +37,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: maxvdm/simplex-smp:5.2.1
-          args: |
+          build_args: |
             - APP=smp-server 
             - APP_PORT=5223
           context: /home/runner/work/simplex/simplex/
@@ -72,7 +72,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: maxvdm/simplex-xftp:5.2.1
-          args: |
+          build_args: |
             - APP=xftp-server
             - APP_PORT=443
           context: /home/runner/work/simplex/simplex/
