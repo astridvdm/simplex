@@ -38,6 +38,7 @@ jobs:
           push: true
           tags: maxvdm/simplex-smp:latest
           build-args: APP="smp-server" APP_PORT="5223"
+          context: /home/runner/work/simplex/simplex/
   xftp-server:
     runs-on: ubuntu-latest
     steps:
@@ -70,3 +71,4 @@ jobs:
           push: true
           tags: maxvdm/simplex-xftp:latest
           build-args: APP="xftp-server" APP_PORT="443"
+          context: /home/runner/work/simplex/simplex/
