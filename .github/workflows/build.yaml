@@ -10,9 +10,7 @@ jobs:
     name: Build smp-server image
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 2
-      matrix:
-        version: [5.2.1]
+      max-parallel: 1
    steps:
       - name: Checkout source repo
         uses: actions/checkout@v3
@@ -60,7 +58,7 @@ jobs:
     name: Build xftp-server image
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 2
+      max-parallel: 1
       matrix:
         version: [5.2.1]
     steps:
