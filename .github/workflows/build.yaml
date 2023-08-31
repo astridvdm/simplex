@@ -10,7 +10,7 @@ jobs:
     name: Build smp-server image
     runs-on: gh-hetzner
     container:
-      image: docker
+      image: ubuntu:jammy
     strategy:
       max-parallel: 1 # Sets the limit of jobs to run concurrently
     permissions:
@@ -63,7 +63,7 @@ jobs:
     name: Build xftp-server image
     runs-on: gh-hetzner
     container:
-      image: docker
+      image: ubuntu:jammy
     strategy:
       max-parallel: 1 # Sets the limit of jobs to run concurrently
     permissions:
