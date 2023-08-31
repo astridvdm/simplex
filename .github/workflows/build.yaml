@@ -17,7 +17,11 @@ jobs:
       contents: read
       packages: write
     steps:
-      - name: Checkout source repo
+      -
+        name: Install Docker
+        run:  curl -fsSL https://get.docker.com -o install-docker.sh && sudo sh install-docker.sh
+      -
+        name: Checkout source repo
         uses: actions/checkout@v3
         with:
           repository: simplex-chat/simplexmq
@@ -70,7 +74,11 @@ jobs:
       contents: read
       packages: write
     steps:
-      - name: Checkout source repo
+      -
+        name: Install Docker
+        run:  curl -fsSL https://get.docker.com -o install-docker.sh && sudo sh install-docker.sh
+      -
+        name: Checkout source repo
         uses: actions/checkout@v3
         with:
           repository: simplex-chat/simplexmq
