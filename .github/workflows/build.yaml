@@ -75,7 +75,7 @@ jobs:
             "maxvdm/simplex-smp:5.3.0.1"
             "ghcr.io/maxvdmerwe/simplex-smp:5.3.0.1"
           shm-size: 2g
-          build-args: |
+          build-arg: |
               "APP=xftp-server"
               "APP_PORT=443"
 
@@ -152,6 +152,6 @@ jobs:
             "maxvdm/simplex-smp:5.3.0.1"
             "ghcr.io/maxvdmerwe/simplex-smp:5.3.0.1"
           shm-size: 2g
-          build-args: |
+          build-arg: |
               "APP=xftp-server"
               "APP_PORT=443"
