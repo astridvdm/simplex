@@ -48,8 +48,8 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            "maxvdm/simplex-smp:5.4.0"
-            "ghcr.io/maxvdmerwe/simplex-smp:5.4.0"
+            "maxvdm/simplex-smp:5.4.0.7"
+            "ghcr.io/maxvdmerwe/simplex-smp:5.4.0.7"
           shm-size: 2g
           build-args: |
               APP=smp-server
@@ -97,8 +97,8 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            "maxvdm/simplex-xftp:5.4.0"
-            "ghcr.io/maxvdmerwe/simplex-xftp:5.4.0"
+            "maxvdm/simplex-xftp:5.4.0.7"
+            "ghcr.io/maxvdmerwe/simplex-xftp:5.4.0.7"
           shm-size: 2g
           build-args: |
               APP=xftp-server
