@@ -51,7 +51,7 @@ jobs:
           push: true
           tags: |
             "maxvdm/simplex-smp:6.0.0-beta-3"
-            "ghcr.io/maxvdmerwe/6.0.0-beta-3"
+            "ghcr.io/maxvdmerwe/simplex-smp:6.0.0-beta-3"
           shm-size: 2g
           build-args: |
               APP=smp-server
