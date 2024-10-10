@@ -50,7 +50,7 @@ jobs:
           push: true
           tags: |
             "maxvdm/simplex-smp:6.0.6"
-            "ghcr.io/maxvdmerwe/simplex-smp:6.0.6"
+            "ghcr.io/astridvdm/simplex-smp:6.0.6"
           shm-size: 2g
           build-args: |
               APP=smp-server
@@ -99,7 +99,7 @@ jobs:
           push: true
           tags: |
             "maxvdm/simplex-xftp:6.0.6"
-            "ghcr.io/maxvdmerwe/simplex-xftp:6.0.6"
+            "ghcr.io/astridvdm/simplex-xftp:6.0.6"
           shm-size: 2g
           build-args: |
               APP=xftp-server
